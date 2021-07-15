@@ -60,7 +60,7 @@ Obviously depends on the material.
  - *Initial layer speed, travel, acceleration etc.:* Lower values help improve bed adhesion and quality - important since the rest of the print depends heavily on the first layer. Recommendation: **Defaults/lower than other layers**.
  - *Z-hop speed [mm/s]:* Z-hop means extruder moves relatively higher than print while traveling over it to avoid hitting it. Recommendation: **5mm/s**.
 
-### Retraction
+### Travel
  - *Retraction distance [mm]:* Pull filament up through extruder (negative extrusion). Too low and material may ooze during travel, too high and material may 'disconnect' inside extruder and not feed back in properly. PETG is particularly stringy and requires more retraction. Calibrate by watching extruder during typical print - set to minimum required to prevent excessive oozing during travel. Recommendation: PETG - **7mm**, otherwise **4mm**.
  - *Retraction speed [mm/s]:* Higher speed can 'suck up' filament quickly before it gets the chance to ooze, but can cause susceptible materials (e.g. PETG) to 'disconnect'. Recommendation: PETG **25mm/s**, otherwise **50mm/s**.
  - *Z-hop height [mm]:* Higher value reduces chance of hitting model when travelling over it with extruder but makes the printer work harder. Recommendation: **0.6mm**.
