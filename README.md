@@ -21,4 +21,7 @@ Guide and tips for 3D printing with 0.4mm nozzle, 1.75mm filament.
 
 ### Walls
 
- - *Wall line count [n]:* Lower number of walls can reduce print time but decrease part strength.
+ - *Wall line count [n]:* Lower number of walls can reduce print time but decrease part strength/stability. Smaller parts can get away with less walls. Recommendation: **3**.
+ - *Z-seam alignment:* Starting point of each path in a layer (can produce an ugly 'seam' due to too much/little material at that point if it lines with other layers). *Random* can potentially disperse this effect by starting at a random point each layer. *Shaprest corner* can hide the seam by placing it on a corner.
+
+### Top/bottom
