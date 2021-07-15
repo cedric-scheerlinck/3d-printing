@@ -32,8 +32,6 @@ Guide and tips for 3D printing with 0.4mm nozzle, 1.75mm filament.
     - *Ironing pattern:* Zig zag
     - *Ironing line spacing:* 0.1mm
     - *Ironing flow:* 10%
-    - *Ironing speed:* 60mm/s
-    - *Ironing acceleration:* 400mm/s^2
-    - *Ironing jerk:* 5mm/s
+    - *Ironing speed, acceleration, jerk:* not too fast e.g. 50mm/s, 400mm/s^2, 5mm/s
 
 ### Infill
