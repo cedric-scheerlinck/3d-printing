@@ -48,7 +48,7 @@ Obviously depends on the material.
  - *Build plate (bed) temperature [C]:* Too high and the part can warp due to temperature difference of cooler layers and hot bed. Too low and first layer may not adhere well to bed.  Recommendation: **60C**.
 #### ABS
 - *Printing temperature:* **215C**
-- *Build plate temperature:* Too low and the part will warp and not stick. Recommendation: **110**.
+- *Build plate temperature:* Too low and the part will warp and not stick. Recommendation: **110C**.
 #### PETG
 - *Printing temperature:* **235C**
 - *Build plate temperature:* **70C**
