@@ -8,7 +8,7 @@ Guide and tips for 3D printing with 0.4mm nozzle, 1.75mm filament.
  - *Extrude:* the extruder (component of a 3D printer) will extrude (squeeze out) an extrusion (some material).
  - *Filament:* raw (unprinted) material.
  - *Line:* one continuous extrusion of filament (does not have to be straight).
- - *Part:* the thing that gets printed.
+ - *Part/print:* the thing that gets printed.
  - *Slicer:* software that converts a 3D object file (e.g. STL) into a list of instructions for the 3D printer (e.g. set temperature, move here, extrude filament).
 
 ## Slicer settings (based on Cura)
@@ -21,7 +21,19 @@ Guide and tips for 3D printing with 0.4mm nozzle, 1.75mm filament.
 
 ### Walls
 
- - *Wall line count [n]:* Lower number of walls can reduce print time but decrease part strength/stability. Smaller parts can get away with less walls. Recommendation: **3**.
- - *Z-seam alignment:* Starting point of each path in a layer (can produce an ugly 'seam' due to too much/little material at that point if it lines with other layers). *Random* can potentially disperse this effect by starting at a random point each layer. *Shaprest corner* can hide the seam by placing it on a corner.
+ - *Wall line count [n]:* Fewer walls can reduce print time but decrease part strength/stability. Smaller parts can get away with less walls. Recommendation: **3**.
+ - *Z-seam alignment:* Starting point of each path in a layer (can produce an ugly 'seam' due to too much/little material at that point if it lines with other layers). *Random* can disperse this effect by starting at a random point each layer. *Shaprest corner* can hide the seam by placing it on a corner. *Shortest* can reduce print time. Recommendation: **Shortest**.
 
-### Top/bottom
+### Top/Bottom
+
+ - *Top layers [n]:* Number of layers on the top surface of a print. Fewer layers can reduce print time but decrease strength/flatness/finish quality. Note this is not the final few layers of the entire print, rather the last few layers before any exposed surface on the print (can and usually does occur lower down as well). Recommendation: **3**
+ - *Bottom layers [n]:* Similar to top layers (follow advice above). More bottom layers can improve flatness and therefore increase chances of success for printing layers above. Recommendation: **3**
+ - *Enable ironing:* The (hot) nozzle will "slide" (iron) over the top surface of the print, slightly melting the print and possibly extruding a tiny amount of material to fill tiny gaps to obtain a smoother finish. Recommendation: **off**, but if you want to use it (requires tweaking):
+    - *Ironing pattern:* Zig zag
+    - *Ironing line spacing:* 0.1mm
+    - *Ironing flow:* 10%
+    - *Ironing speed:* 60mm/s
+    - *Ironing acceleration:* 400mm/s^2
+    - *Ironing jerk:* 5mm/s
+
+### Infill
