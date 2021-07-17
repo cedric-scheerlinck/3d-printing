@@ -54,10 +54,10 @@ Obviously depends on the material.
 - *Build plate temperature:* **70C**
 
 ### Speed
- - *Print speed [mm/s]:* Slower print speed potentially improves print quality. PETG is sensitive to speed and slower is advised.  Recommendation: PETG - **30mm/s**, otherwise - **60mm/s**.
+ - *Print speed [mm/s]:* Slower print speed potentially improves print quality. PETG is sensitive to speed and slower is advised, hwoever too slow (e.g. <10mm/s) can cause blobs and stringing. Recommendation: PETG - **30mm/s**, otherwise - **60mm/s**.
  - *Travel speed [mm/s]:* Usually no issue having it faster, if it's too slow material can ooze during travel resulting in stringing, blobbing and other issues. Recommendation: **120mm/s**.
  - *Acceleration, jerk:* Higher values can make the movements 'jerky' and 'wobbly'. Recommendation: **400mm/s^2, 5mm/s**.
- - *Initial layer speed, travel, acceleration etc.:* Lower values help improve bed adhesion and quality - important since the rest of the print depends heavily on the first layer. Recommendation: **Defaults/lower than other layers**.
+ - *Initial layer speed, travel, acceleration etc.:* Lower values help improve bed adhesion and quality - important since the rest of the print depends heavily on the first layer. Be careful not to lower the speed (<10mm/s) too much for PETG though. Recommendation: **Defaults/lower than other layers**.
  - *Z-hop speed [mm/s]:* Z-hop means extruder moves relatively higher than print while traveling over it to avoid hitting it. Recommendation: **5mm/s**.
 
 ### Travel
