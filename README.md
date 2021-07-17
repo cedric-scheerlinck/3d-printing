@@ -66,3 +66,11 @@ Obviously depends on the material.
  - *Z-hop height [mm]:* Higher value reduces chance of hitting model when travelling over it with extruder but makes the printer work harder. Recommendation: **0.6mm**.
 
 ### Cooling
+ - *Fan speed [%]:* ABS and PETG require little to no cooling, PLA+ benefits from cooling after the first few layers (cooling the first layer(s) may reduce bed adhesion). Recommendation: first layer - **0%**, ABS - **0%**, PETG - **20%**, PLA+ - **100%**.
+
+### Support
+ - *Generate support:* Try and avoid using support, often bridges/overhangs can be printed without, and in some cases, small modification to the design/orientation can eliminate the need for support. Recommendation: **off**.
+ - *Support structure:* `Tree` can use (overhanging) branches to potentially reach hard-to-reach places but can be harder to remove than `Normal` support structure. Recommendation: **Normal**.
+
+### Build plate adhesion
+ - *Build plate adhesion type:* `Skirt` prints a (single-layer) ring(s) around the base of the model and can help you eyeball the rough size of the part, wipe away any excess material from the nozzle, fill/pressurize the extruder before printing the part, 'flushes' out a bit of material (that might be old/manky) before printing the all-important first layer and helps minimize initial oozing since the skirt finishes printing close to the start of the print. `Brim` helps prevent 'curling' up from the bed and improves adhesion but must be removed from the final print and can ruin the look of the finish. `Raft` should be used as a last resort if the part is not sticking (usually due to a thin or small base). Recommendation: **Skirt**.
