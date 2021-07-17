@@ -42,7 +42,7 @@ Guide and tips for 3D printing with 0.4mm nozzle, 1.75mm filament.
 ### Material
 Obviously depends on the material.
  - *Printing temperature [C]:* Quick calibration - set to the lowest temperature that you can manually push filmanet through easily. Better calibration - print a [temperature tower](https://www.thingiverse.com/thing:2729076).
- - *Flow [%]:* Worth [calibrating](https://3dprintbeginner.com/artillery-sidewinder-x1-calibration-guide). Recommendation: **100%**.
+ - *Flow [%]:* Worth [calibrating](https://3dprintbeginner.com/artillery-sidewinder-x1-calibration-guide). Important: in practice [print speed](#speed) impacts flow (typically higher speed -> lower effective flow), therefore (re-)calibrate using desired print speed. Recommendation: **100%**.
 #### PLA+
  - *Printing temperature:* **200C**.
  - *Build plate (bed) temperature [C]:* Too high and the part can warp due to temperature difference of cooler layers and hot bed. Too low and first layer may not adhere well to bed.  Recommendation: **60C**.
