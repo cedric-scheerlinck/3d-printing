@@ -13,6 +13,9 @@ Guide and tips for 3D printing with 0.4mm nozzle, 1.75mm filament.
 
 ## Slicer settings (based on Cura)
 
+### Machine settings
+When the print finishes, material tends to ooze a little and can ooze at the start of the next print. To alleviate this, I like to retract filament after the print finishes using the g-code `G1 E-13.0 F300 ; retract filament after print to stop oozing`. In Cura, `Settings >> Printer >> Manage Printers... >> Machine Settings >> End G-code` allows you to add custom g-code at the end of a print (e.g. [end g-code](end_gcode.txt)).
+
 ### Quality
  - *Layer height [mm]:* lower values may improve print quality and finish but take longer. Recommendation: **0.2mm**.
  - *Initial layer height [mm]:* thicker layer helps bed adhesion. Recommendation: **0.3 - 0.35mm**.
