@@ -11,6 +11,17 @@ Guide and tips for 3D printing with 0.4mm nozzle, 1.75mm filament.
  - *Part/print:* the thing that gets printed.
  - *Slicer:* software that converts a 3D object file (e.g. STL) into a list of instructions for the 3D printer (e.g. set temperature, move here, extrude filament).
 
+## Resolution
+Often you'll have to experiment by tweaking some parameters. I find it helpful to start with coarse adjustments (e.g. increments of 10) before fine adjustments (e.g. 0.01). Here is a guide to the minimum resolution I recommend for adjusting parameters:
+ - *Line height/width:* 0.01mm
+ - *Temperature:* 5C
+ - *Flow:* 5%
+ - *Z offset:* 0.01mm
+ - *Infill density:* 5%
+ - *Speed:* 5mm/s
+
+Rule of thumb: aim to overshoot first when adjusting parameters, e.g. if you encounter overextrusion, set flow to a value you are sure will *under*extrude to calibrate your intuition about where the right level will be.
+
 ## Slicer settings (based on Cura)
 
 ### Machine settings
