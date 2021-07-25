@@ -68,19 +68,19 @@ Obviously depends on the material.
 - *Build plate temperature:* **70C**
 
 ### Speed
- - *Print speed [mm/s]:* Slower print speed potentially improves print quality. PETG is sensitive to speed and slower is advised, hwoever too slow (e.g. <10mm/s) can cause blobs and stringing. Recommendation: PETG - **30mm/s**, otherwise - **60mm/s**.
+ - *Print speed [mm/s]:* Slower print speed potentially improves print quality. PETG is sensitive to speed and slower is advised, hwoever too slow (e.g. <10mm/s) can cause blobs and stringing. Recommendation: PETG: **30mm/s**, otherwise: **60mm/s**.
  - *Travel speed [mm/s]:* Usually no issue having it faster, if it's too slow material can ooze during travel resulting in stringing, blobbing and other issues. Recommendation: **120mm/s**.
  - *Acceleration, jerk:* Higher values can make the movements 'jerky' and 'wobbly'. Recommendation: **400mm/s^2, 5mm/s**.
  - *Initial layer speed, travel, acceleration etc.:* Lower values help improve bed adhesion and quality - important since the rest of the print depends heavily on the first layer. Be careful not to lower the speed (<10mm/s) too much for PETG though. Recommendation: **Defaults/lower than other layers**.
  - *Z-hop speed [mm/s]:* Z-hop means extruder moves relatively higher than print while traveling over it to avoid hitting it. Recommendation: **5mm/s**.
 
 ### Travel
- - *Retraction distance [mm]:* Pull filament up through extruder (negative extrusion). Too low and material may ooze during travel, too high and material may 'disconnect' inside extruder and not feed back in properly. PETG is particularly stringy and requires more retraction. Calibrate by watching extruder during typical print - set to minimum required to prevent excessive oozing during travel. Recommendation: PETG - **7mm**, otherwise **4mm**.
- - *Retraction speed [mm/s]:* Higher speed can 'suck up' filament quickly before it gets the chance to ooze, but can cause susceptible materials (e.g. PETG) to 'disconnect'. Recommendation: PETG **25mm/s**, otherwise **50mm/s**.
+ - *Retraction distance [mm]:* Pull filament up through extruder (negative extrusion). Too low and material may ooze during travel, too high and material may 'disconnect' inside extruder and not feed back in properly. PETG is particularly stringy and requires more retraction. Calibrate by watching extruder during typical print - set to minimum required to prevent excessive oozing during travel. Recommendation: PETG: **7mm**, otherwise: **4mm**.
+ - *Retraction speed [mm/s]:* Higher speed can 'suck up' filament quickly before it gets the chance to ooze, but can cause susceptible materials (e.g. PETG) to 'disconnect'. Recommendation: PETG: **25mm/s**, otherwise: **40mm/s**.
  - *Z-hop height [mm]:* Higher value reduces chance of hitting model (and potentially detaching it from the print bed - disaster) when travelling over it with extruder but makes the printer work harder. Recommendation: **0.6mm**.
 
 ### Cooling
- - *Fan speed [%]:* ABS and PETG require little to no cooling, PLA+ benefits from cooling after the first few layers (cooling the first layer(s) may reduce bed adhesion). Recommendation: first layer - **0%**, ABS - **0%**, PETG - **20%**, PLA+ - **100%**.
+ - *Fan speed [%]:* ABS and PETG require little to no cooling, PLA+ benefits from cooling after the first few layers (cooling the first layer(s) may reduce bed adhesion). Recommendation: first layer: **0%** (all materials), ABS: **0%**, PETG: **20%**, PLA+: **100%**.
 
 ### Support
  - *Generate support:* Try and avoid using support, often bridges/overhangs can be printed without, and in some cases, small modification to the design/orientation can eliminate the need for support. Recommendation: **off**.
