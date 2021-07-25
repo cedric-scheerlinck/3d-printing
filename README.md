@@ -77,7 +77,7 @@ Obviously depends on the material.
 ### Travel
  - *Retraction distance [mm]:* Pull filament up through extruder (negative extrusion). Too low and material may ooze during travel, too high and material may 'disconnect' inside extruder and not feed back in properly. PETG is particularly stringy and requires more retraction. Calibrate by watching extruder during typical print - set to minimum required to prevent excessive oozing during travel. Recommendation: PETG - **7mm**, otherwise **4mm**.
  - *Retraction speed [mm/s]:* Higher speed can 'suck up' filament quickly before it gets the chance to ooze, but can cause susceptible materials (e.g. PETG) to 'disconnect'. Recommendation: PETG **25mm/s**, otherwise **50mm/s**.
- - *Z-hop height [mm]:* Higher value reduces chance of hitting model when travelling over it with extruder but makes the printer work harder. Recommendation: **0.6mm**.
+ - *Z-hop height [mm]:* Higher value reduces chance of hitting model (and potentially detaching it from the print bed - disaster) when travelling over it with extruder but makes the printer work harder. Recommendation: **0.6mm**.
 
 ### Cooling
  - *Fan speed [%]:* ABS and PETG require little to no cooling, PLA+ benefits from cooling after the first few layers (cooling the first layer(s) may reduce bed adhesion). Recommendation: first layer - **0%**, ABS - **0%**, PETG - **20%**, PLA+ - **100%**.
@@ -87,4 +87,6 @@ Obviously depends on the material.
  - *Support structure:* `Tree` can use (overhanging) branches to potentially reach hard-to-reach places but can be harder to remove than `Normal` support structure. Recommendation: **Normal**.
 
 ### Build plate adhesion
+*Curling/warping* is when the first layer of the print detaches from the bed (in places) and curls up away from the bed due to contractive forces from above layers as they cool and shrink. Curling is most severe at sharp corners and thin features, thus, I recommend modifying parts (where possible) to reduce sharpness of corners (e.g. fillet). Also try minimising thermal shrinkage by printing at a lower temperature and for PLA+ try lowering the bed temperature to minimise the temperature difference between the first layer and (cooled) above layers. 
+
  - *Build plate adhesion type:* `Skirt` prints a (single-layer) ring(s) around the base of the model and can help you eyeball the rough size of the part, wipe away any excess material from the nozzle, fill/pressurize the extruder before printing the part, 'flushes' out a bit of material (that might be old/manky) before printing the all-important first layer and helps minimize initial oozing since the skirt finishes printing close to the start of the print. `Brim` helps prevent 'curling' up from the bed and improves adhesion but must be removed from the final print and can ruin the look of the finish. `Raft` should be used as a last resort if the part is not sticking (usually due to a thin or small base). Recommendation: **Skirt**.
