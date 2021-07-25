@@ -28,9 +28,9 @@ Rule of thumb: aim to overshoot first when adjusting parameters, e.g. if you enc
 When the print finishes, material tends to ooze a little and can ooze at the start of the next print. To alleviate this, I like to retract filament after the print finishes using the g-code `G1 E-13.0 F300 ; retract filament after print to stop oozing`. In Cura, `Settings >> Printer >> Manage Printers... >> Machine Settings >> End G-code` allows you to add custom g-code at the end of a print (e.g. [end g-code](end_gcode.txt)).
 
 ### Quality
- - *Layer height [mm]:* lower values may improve print quality and finish but take longer. Recommendation: **0.2mm**.
+ - <a name="layer-height">*Layer height [mm]:*</a> lower values may improve print quality and finish but take longer. Recommendation: **0.2mm**.
  - *Initial layer height [mm]:* thicker layer helps bed adhesion. Recommendation: **0.3 - 0.35mm**.
- - *Line width [mm]:* Lower line width may improve dimensional accuracy in some cases (higher resolution) but will require more lines thus take longer. Higher line width can improve (bed) adhesion (the sides of the nozzle will "squish" down material). Many slicers will adapt the line width (especially infill), sometimes creating lines thinner than the specified width. If the line width is large e.g. 2mm there will be gaps between lines. Setting line width to a "common" factor (e.g. 0.5 or 0.45 instead of 0.4637) can make design easier/more predictable, e.g. creating a 2mm thick wall will result in 4 x 0.5mm lines. Recommendation: **0.5mm**.
+ - <a name="line-width">*Line width [mm]:*</a> Lower line width may improve dimensional accuracy in some cases (higher resolution) but will require more lines thus take longer. Higher line width can improve (bed) adhesion (the sides of the nozzle will "squish" down material). Many slicers will adapt the line width (especially infill), sometimes creating lines thinner than the specified width. If the line width is large e.g. 2mm there will be gaps between lines. Setting line width to a "common" factor (e.g. 0.5 or 0.45 instead of 0.4637) can make design easier/more predictable, e.g. creating a 2mm thick wall will result in 4 x 0.5mm lines. Recommendation: **0.5mm**.
  - *Initial layer line width [%]:* A wider initial layer may improve bed adhesion. In rare cases it is desirable to use 100% for consistency with above layers. Recommendation: **120%**.
 
 ### Walls
@@ -56,9 +56,9 @@ When the print finishes, material tends to ooze a little and can ooze at the sta
 ### Material
 Obviously depends on the material.
  - *Printing temperature [C]:* Quick calibration - set to the lowest temperature that you can manually push filmanet through easily. Better calibration - print a [temperature tower](https://www.thingiverse.com/thing:2729076).
- - *Flow [%]:* Worth [calibrating](https://3dprintbeginner.com/artillery-sidewinder-x1-calibration-guide). Important: in practice [print speed](#speed) impacts flow (typically higher speed -> lower effective flow), therefore (re-)calibrate using desired print speed. Recommendation: **100%**.
+ - *Flow [%]:* Worth [calibrating](https://3dprintbeginner.com/artillery-sidewinder-x1-calibration-guide). Important: in practice [print speed](#speed), [line width](#line-width)/[layer height](#layer-height) impacts flow (typically higher speed -> lower effective flow), therefore (re-)calibrate using desired print speed, line width and height. Recommendation: **100%**.
 #### PLA+
- - *Printing temperature:* **200C**.
+ - *Printing temperature:* **205C**.
  - *Build plate (bed) temperature [C]:* Too high and the part can warp due to temperature difference of cooler layers and hot bed. Too low and first layer may not adhere well to bed.  Recommendation: **60C**.
 #### ABS
 - *Printing temperature:* **215C**
@@ -90,3 +90,4 @@ Obviously depends on the material.
 *Curling/warping* is when the first layer of the print detaches from the bed (in places) and curls up away from the bed due to contractive forces from above layers as they cool and shrink. Curling is most severe at sharp corners and thin features, thus, I recommend modifying parts (where possible) to reduce sharpness of corners (e.g. fillet). Also try minimising thermal shrinkage by printing at a lower temperature and for PLA+ try lowering the bed temperature to minimise the temperature difference between the first layer and (cooled) above layers. 
 
  - *Build plate adhesion type:* `Skirt` prints a (single-layer) ring(s) around the base of the model and can help you eyeball the rough size of the part, wipe away any excess material from the nozzle, fill/pressurize the extruder before printing the part, 'flushes' out a bit of material (that might be old/manky) before printing the all-important first layer and helps minimize initial oozing since the skirt finishes printing close to the start of the print. `Brim` helps prevent 'curling' up from the bed and improves adhesion but must be removed from the final print and can ruin the look of the finish. `Raft` should be used as a last resort if the part is not sticking (usually due to a thin or small base). Recommendation: **Skirt**.
+ - 
