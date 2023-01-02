@@ -28,7 +28,7 @@ Rule of thumb: aim to overshoot first when adjusting parameters, e.g. if you enc
 When the print finishes, material tends to ooze a little and can ooze at the start of the next print. To alleviate this, I like to retract filament after the print finishes using the g-code `G1 E-13.0 F300 ; retract filament after print to stop oozing`. In Cura, `Settings >> Printer >> Manage Printers... >> Machine Settings >> End G-code` allows you to add custom g-code at the end of a print (e.g. [end g-code](end_gcode.txt)).
 
 ### Quality
- - <a name="layer-height">*Layer height [mm]:*</a> lower values may improve print quality and finish but take longer. Recommendation: **0.2mm**.
+ - <a name="layer-height">*Layer height [mm]:*</a> lower values may improve print quality and finish but take longer. Recommendation: **0.2mm**. Maximum (for faster printing) **0.3mm**
  - *Initial layer height [mm]:* thicker layer helps bed adhesion. Recommendation: **0.3 - 0.35mm**.
  - <a name="line-width">*Line width [mm]:*</a> Lower line width may improve dimensional accuracy in some cases (higher resolution) but will require more lines thus take longer. Higher line width can improve (bed) adhesion (the sides of the nozzle will "squish" down material). Many slicers will adapt the line width (especially infill), sometimes creating lines thinner than the specified width. If the line width is large e.g. 2mm there will be gaps between lines. Setting line width to a "common" factor (e.g. 0.5 or 0.45 instead of 0.4637) can make design easier/more predictable, e.g. creating a 2mm thick wall will result in 4 x 0.5mm lines. Recommendation: **0.5mm**.
  - *Initial layer line width [%]:* A wider initial layer may improve bed adhesion. In rare cases it is desirable to use 100% for consistency with above layers. Recommendation: **120%**.
@@ -57,6 +57,7 @@ When the print finishes, material tends to ooze a little and can ooze at the sta
 Obviously depends on the material.
  - *Printing temperature [C]:* Quick calibration - set to the lowest temperature that you can manually push filmanet through easily. Better calibration - print a [temperature tower](https://www.thingiverse.com/thing:2729076).
  - *Flow [%]:* Worth [calibrating](https://3dprintbeginner.com/artillery-sidewinder-x1-calibration-guide). Important: in practice [print speed](#speed), [line width](#line-width)/[layer height](#layer-height) impacts flow (typically higher speed -> lower effective flow), therefore (re-)calibrate using desired print speed, line width and height. Recommendation: **100%**.
+ - *Initial Layer Flow [%]:* Higher initial layer flow can improve bed adhesion by pushing more material into the bed. Recommendation: 10% more e.g. **110%**.
 #### PLA+
  - *Printing temperature:* **205C**.
  - *Build plate (bed) temperature [C]:* Too high and the part can warp due to temperature difference of cooler layers and hot bed. Too low and first layer may not adhere well to bed.  Recommendation: **60C**.
@@ -65,10 +66,10 @@ Obviously depends on the material.
 - *Build plate temperature:* Too low and the part will warp and not stick. Recommendation: **110C**.
 #### PETG
 - *Printing temperature:* **235C**
-- *Build plate temperature:* **70C**
+- *Build plate temperature:* **70C**. Increase to **80C** if you need more bed adhesion.
 
 ### Speed
- - *Print speed [mm/s]:* Slower print speed potentially improves print quality. PETG is sensitive to speed and slower is advised, hwoever too slow (e.g. <10mm/s) can cause blobs and stringing. Recommendation: PETG: **30mm/s**, otherwise: **60mm/s**.
+ - *Print speed [mm/s]:* Slower print speed potentially improves print quality. PETG is sensitive to speed and slower is advised, however too slow (e.g. <10mm/s) can cause blobs and stringing. Recommendation: PETG: **30mm/s**, otherwise: **60mm/s**.
  - *Travel speed [mm/s]:* Usually no issue having it faster, if it's too slow material can ooze during travel resulting in stringing, blobbing and other issues. Recommendation: **120mm/s**.
  - *Acceleration, jerk:* Higher values can make the movements 'jerky' and 'wobbly'. Recommendation: **400mm/s^2, 5mm/s**.
  - *Initial layer speed, travel, acceleration etc.:* Lower values help improve bed adhesion and quality - important since the rest of the print depends heavily on the first layer. Be careful not to lower the speed (<10mm/s) too much for PETG though. Recommendation: **Defaults/lower than other layers**.
