@@ -65,7 +65,7 @@ Obviously depends on the material.
 - *Printing temperature:* **215C**
 - *Build plate temperature:* Too low and the part will warp and not stick. Recommendation: **110C**.
 #### PETG
-- *Printing temperature:* **235C**
+- *Printing temperature:* **240C**. If you get underextrusion, **250C**
 - *Build plate temperature:* **70C**. Increase to **80C** if you need more bed adhesion.
 
 ### Speed
